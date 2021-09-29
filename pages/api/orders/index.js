@@ -66,7 +66,6 @@ handler.post(async (req, res) => {
     });
 
     const order = await newOrder.save();
-    // console.log("pages/api/orders/index.js after saved order: \n", order);
     await db.disconnect();
     res.status(201).send(order);
   } else {

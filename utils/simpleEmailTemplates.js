@@ -21,6 +21,7 @@ export const formatOrderItems = (order) => {
                             <th>Product Name</th>
                             <th>Price</th>
                             <th>Quantity</th>
+                            <th>Size</th>
                             <th>Product(Last 4)ID</th>
                           </tr>
                         `;
@@ -30,6 +31,7 @@ export const formatOrderItems = (order) => {
               <td>${p.name}</td>
               <td>$ ${(Number.parseFloat(p.price)).toFixed(2)}</td>
               <td>&nbsp;&nbsp;&nbsp;${p.quantity}</td>
+              <td>&nbsp;&nbsp;${p.size}&nbsp;</td>
               <td>${(p._id).toString().substring(20,24)}</td>
             </tr>`;
   });

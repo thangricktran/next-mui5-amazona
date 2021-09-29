@@ -74,7 +74,7 @@ function PlaceOrder() {
       enqueueSnackbar(getError(error), { variant: 'error' });
     }
   };
- 
+
   return (
     <Layout title="Place Order">
       <CheckoutWizard activeStep={3} />
