@@ -46,16 +46,16 @@ const StripeCheckoutForm = ({ stripePaymentIntent, onStripeCheckout }) => {
     style: {
       base: {
         iconColor: '#c4f0ff',
-        color: '#fff',
+        color: '#0000FF',
         fontWeight: '500',
         fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
         fontSize: '16px',
         fontSmoothing: 'antialiased',
         ':-webkit-autofill': {
-          color: '#fce883',
+          color: '#0000FF',
         },
         '::placeholder': {
-          color: '#87BBFD',
+          color: '#0000FF',
         },
       },
       invalid: {

@@ -34,12 +34,20 @@ handler.put(async (req, res) => {
     // send customer an email order confirmation
     const { recipient, emailSubject, orderTmpl } = emailOrderConfirmation(paidOrder);
     const emailData = {
-      to: [`${recipient}`, 'thangricktran2@gmail.com'],
+      to: [`${recipient}`],
       from: 'thangricktran2@gmail.com',
       subject: `${emailSubject}`,
       html: `${orderTmpl}`
     };
     await sgMail.send(emailData);
+    // send to order admin a copy
+    const emailDataToAdmin = {
+      to: ['thangricktran2@gmail.com'],
+      from: 'thangricktran2@gmail.com',
+      subject: `${emailSubject}`,
+      html: `${orderTmpl}`
+    };
+    await sgMail.send(emailDataToAdmin);
 
     await res.send({ message: 'Order paid', order: paidOrder });
   } else {

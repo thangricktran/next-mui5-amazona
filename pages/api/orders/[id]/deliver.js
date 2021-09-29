@@ -26,12 +26,20 @@ handler.put(async (req, res) => {
     // send customer an email for change in order status to shipped
     const { recipient, emailSubject, orderTmpl } = emailOrderDeliveryStatus(deliveredOrder);
     const emailData = {
-      to: [`${recipient}`, 'thangricktran2@gmail.com'],
+      to: [`${recipient}`],
       from: 'thangricktran2@gmail.com',
       subject: `${emailSubject}`,
       html: `${orderTmpl}`
     };
     await sgMail.send(emailData);
+    // send an email to order admin that the order has been sent out
+    const emailDataToAdmin = {
+      to: ['thangricktran2@gmail.com'],
+      from: 'thangricktran2@gmail.com',
+      subject: `${emailSubject}`,
+      html: `${orderTmpl}`
+    };
+    await sgMail.send(emailDataToAdmin);
 
     await db.disconnect();
     await res.send({ message: 'Order delivered', order: deliveredOrder });

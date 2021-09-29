@@ -24,6 +24,7 @@ function CarouselMain(props) {
     },
 
     container: {
+      // border: '3px solid red',
       position: 'absolute',
       display: 'grid',
       gap: '1rem',
@@ -34,15 +35,35 @@ function CarouselMain(props) {
       // border: '3px solid blue',
       margin: '10px auto 2rem',
       opacity: 0,
+      // -webkit-transition: all 4s ease;
+      // -moz-transition: all 4s ease;
+      // -ms-transition: all 4s ease;
+      // -o-transition: all 4s ease;
+      webkitTransition: 'all 0.3s linear',
+      mozTransition: 'all 0.3s linear',
+      msTransition: 'all 0.3s linear',
+      oTransition: 'all 0.3s linear',
       transition: 'all 0.3s linear',
       '&.activeSlide': {
         opacity: 1,
+        webkitTransform: 'translateX(0)',
+        mozTransform: 'translateX(0)',
+        msTransform: 'translateX(0)',
+        oTransform: 'translateX(0)',
         transform: 'translateX(0)',
       },
       '&.lastSlide': {
+        webkitTransform: 'translateX(-100%)',
+        mozTransform: 'translateX(-100%)',
+        msTransform: 'translateX(-100%)',
+        oTransform: 'translateX(-100%)',
         transform: 'translateX(-100%)',
       },
       '&.nextSlide': {
+        webkitTransform: 'translateX(100%)',
+        mozTransform: 'translateX(100%)',
+        msTransform: 'translateX(100%)',
+        oTransform: 'translateX(100%)',
         transform: 'translateX(100%)',
       },
     //   ex. ["@media (min-height:800px)"]: { marginTop: 10 }
@@ -52,19 +73,27 @@ function CarouselMain(props) {
     //   },
     },
 
+    // @media screen and (min-width: 775px) {
+    //   .btn-container {
+    //     margin: 0 auto;
+    //     max-width: 700px;
+    //   }
+    // }
     btnContainer: {
-      // border: '3px solid blue',
+      // border: '3px solid purple',
       position: 'absolute',
       display: 'flex',
       top: '100%',
       left: '50%',
       webkitTransform: 'translate(-50%, -50%)',
       mozTransform: 'translate(-50%, -50%)',
+      msTransform: 'translate(-50%, -50%)',
+      oTransform: 'translate(-50%, -50%)',
       transform: 'translate(-50%, -50%)',
       justifyContent: 'center',
       alignItems: 'center',
       flexWrap: 'wrap',
-      ["@media (min-width:576px)"]: {
+      ["@media screen and (min-width: 775px)"]: {
         margin: '0 auto',
         maxWidth: '700px',
       },
@@ -78,6 +107,10 @@ function CarouselMain(props) {
       borderRadius: '5px',
       cursor: 'pointer',
       margin: '0.5rem',
+      webkitTransition: 'all 0.3s linear',
+      mozTransition: 'all 0.3s linear',
+      msTransition: 'all 0.3s linear',
+      oTransition: 'all 0.3s linear',
       transition: 'all 0.3s linear',
       outline: 'none',
     },
@@ -176,7 +209,7 @@ function CarouselMain(props) {
   }, [page, continueSlider, nextPage]);
 
   return (
-    <div>
+    <div style={{marginTop: '1.5rem'}}>
       <div className={classes.carousel}>
         <div className={classes.itemsWrapper}>
           {carouselData.map((item, index) => {
