@@ -22,3 +22,18 @@ indexFooter {
   margin-top: 20px;
   text-align: center;
 }
+/* CAROUSEL FEEDER */
+.carousefeederitem {
+  width: 90vw;
+  height: 300px;
+  /* max-width: 1170px; */
+  margin: 0.5rem auto 0.1rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  background-color: inherit;
+}

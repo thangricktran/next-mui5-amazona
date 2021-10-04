@@ -14,5 +14,10 @@ export const getAllowedSize = () => {
   (window.innerWidth <=  904) ? 2 :
   (window.innerWidth <=  1217) ? 3 : 4;
 };
+// export const getAllowedSize = () => {
+//   return (window.innerWidth <= 600) ?  1 :
+//   (window.innerWidth <=  900) ? 2 :
+//   (window.innerWidth <=  1217) ? 3 : 4;
+// };
 
 export default paginate;

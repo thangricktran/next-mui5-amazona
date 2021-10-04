@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-// import MuiNextLink from "components/MuiNextLink";
 import dynamic from 'next/dynamic';
 import { useContext } from 'react';
 // import NextLink from 'next/link';
@@ -11,7 +10,8 @@ import db from 'utils/db';
 import { getSizeObjectFromAProduct } from 'utils/helpers';
 import Product from 'models/Product';
 import ProductItem from 'components/ProductItem';
-import CarouselMain from 'components/carousel/CarouselMain';
+import CarouselFeeder from 'components/CarouselFeeder';
+// import Carousel from 'react-material-ui-carousel';
 import {
   Grid, Typography,
 } from '@material-ui/core';
@@ -62,23 +62,7 @@ function Home(props) {
   
   return (
     <Layout>        
-      {/* <Carousel className={classes.mt1} animation="slide">
-        {featuredProducts.map((product) => (
-          <MuiNextLink
-            key={product._id}
-            href={`/product/${product.slug}`}
-            underline="none"
-          >
-            <img
-              src={product.featuredImage}
-              alt={product.name}
-              // className={classes.featuredImage}
-            ></img>
-          </MuiNextLink>
-        ))}
-      </Carousel> */}
-
-      <CarouselMain featuredProducts={featuredProducts}  /> 
+      <CarouselFeeder featuredProducts={featuredProducts}  /> 
 
       <Typography variant="h2">Popular Products</Typography>
       <Grid container spacing={3}>
