@@ -61,7 +61,7 @@ function Home(props) {
   };
   
   return (
-    <Layout>        
+    <Layout> 
       <CarouselFeeder featuredProducts={featuredProducts}  /> 
 
       <Typography variant="h2">Popular Products</Typography>

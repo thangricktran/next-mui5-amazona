@@ -26,14 +26,14 @@ indexFooter {
 .carousefeederitem {
   width: 90vw;
   height: 300px;
-  /* max-width: 1170px; */
+  max-width: 1170px;
   margin: 0.5rem auto 0.1rem;
   position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
   background-color: inherit;
 }

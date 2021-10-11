@@ -81,7 +81,9 @@ function CarouselFeeder(props) {
       interval={6500} timeout={600}
       indicatorContainerProps={{
         style: {
-          width: '90vw',
+          width: '90%',
+          // width: '90vw',
+          maxWidth: '1170px',
           marginTop: '10px',
           display: 'grid',
           gap: '.5rem',

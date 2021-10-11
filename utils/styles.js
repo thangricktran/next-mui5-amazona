@@ -127,8 +127,9 @@ const useStyles = makeStyles((darkMode=false) => ({
     menuButton: { padding: 0 },
     mt1: { marginTop: '1rem' },
     carbanner: {
-      marginTop: '1rem',
+      margin: '1rem auto .2rem',
       backgroundColor: 'inherit',
+      textAlign: 'center',
     },
     // search
     searchSection: {
